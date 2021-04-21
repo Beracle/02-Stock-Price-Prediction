@@ -28,6 +28,7 @@ df = pd.read_csv('NSE-TATAGLOBAL11.csv')
 df.head()
 ```
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210114105021352.png)
+
 可以看到数据集中有多个变量：日期，开盘价，最高价，最低价，最后一笔，收盘价，总交易量和营业额。
 - Open和Close代表该股票在某一天的交易开始和最终的价格。
 - High，Low和Last代表当天股票的最高价，最低价和最后价。
@@ -56,6 +57,7 @@ plt.plot(df['Close'], label='Close Price history')
 
 移动平均（Moving Average）是用来衡量当前趋势的方向。移动平均和一般意义下的平均概念是一致的，都是通过计算过去数据的平均值得到的数学结果。移动平均经常用于金融领域的预测，将计算出的平均值结果绘制成图标，以便于能够观测平滑的数据，而不是聚焦于所有金融市场固有的每日价格波动。移动平均可过滤高频噪声，反映出中长期低频趋势，辅助投资者做出投资判断。“移动”平均不是使用简单的平均值，而是使用移动平均技术，该技术为每个预测使用最新的一组值。换句话说，对于每个后续步骤，在从集合中删除最旧的观察值的同时考虑预测值。数据集在不断“移动”。
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210114104724548.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0JlX3JhY2xl,size_16,color_FFFFFF,t_70)
+
 这种计算方法确保只对当前信息进行核算。事实上，任何移动平均算法都会呈现一定的滞后性。它以滞后性的代价换来了平滑性，移动平均必须在平滑性和滞后性之间取舍。
 
 为了不破坏原数据集，我们重新定义一个DataFrame。
@@ -106,6 +108,7 @@ print('RMSE value on validation set:')
 print(rms)
 ```
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210114112430838.png)
+
 通过图直观地看一下预测效果。
 
 ```python
