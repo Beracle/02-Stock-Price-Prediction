@@ -71,6 +71,7 @@ for i in range(0,len(data)):
 new_data
 ```
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210114110333407.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0JlX3JhY2xl,size_16,color_FFFFFF,t_70)
+
 将数据分为“训练集”和“测试集”。
 
 ```python
@@ -84,6 +85,7 @@ print('Shape of validation set:')
 print(valid.shape)
 ```
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210114110612606.png)
+
 移动平均方法。移动窗口设置为248，所以要想得到第一个预测数据需要从原数据集第739个数开始进行求和平均。
 
 ```python
